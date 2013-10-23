@@ -11,9 +11,10 @@
 /*
  * Body
  */
-
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+@import url(http://fonts.googleapis.com/css?family=Autour+One);
 body {
-  background: url(../images/bg.jpg) repeat 0 0;
+  background: url(../images/type.png) repeat 0 0;
   margin: 0;
   padding: 0;
 }
@@ -50,6 +51,7 @@ body {
   float: left; /* LTR */
   margin: 0;
   padding: 0;
+
 }
 #logo img {
   vertical-align: bottom;
@@ -60,13 +62,15 @@ body {
 }
 
 #site-name { /* The name of the website */
+  color:#f89909;
   margin: 0;
-  font-size: 2em;
+  font-size: 4em;
   line-height: 1.5em;
+  font-family: 'Autour One', cursive; 
 }
 #site-name a:link,
 #site-name a:visited {
-  color: #000;
+ color:#f89909;
   text-decoration: none;
 }
 #site-name a:hover,
@@ -76,7 +80,8 @@ body {
 
 #site-slogan { /* The slogan (or tagline) of a website */
   margin: 0;
-  font-size: 1em;
+  font-size: 0.5em;
+  color:#ffffff;
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */
@@ -95,9 +100,11 @@ body {
  */
 
 #content {
-  font-family:Reenie Beanie;
-  font-style:italic;
-  font-weight:bold; 
+	background-color: #f9f9f9;
+	padding: 10px;
+	border-radius: 10px;
+ font-family: 'Nunito', sans-serif;
+ width: 79% !important;
 }
 
 .region-highlighted {
@@ -152,7 +159,10 @@ tr.warning { /* Medium priority messages */
 }
 
 div.quiz-question-body { font-size: 1.5em;color:#472008; }
-div#quiz_progress {font-size: 2em;color: #E3A857;}
+div#quiz_progress {font-size: 2em;color: #169ce2;}
+#edit-submit{color:#169ce2;}
+h2.block-title {color:#f89909;
+}
 div.error,
 tr.error { /* High priority messages. See also the .error declaration below. */
 }
@@ -221,7 +231,7 @@ span.field-label { /* The inline field label used by the Fences module */
  * (see the layout.css file.)
  */
 
-.region-sidebar-second {
+.region-sidebar-second { background-color: #f9f9f9;border-radius: 15px;
 }
 
 /*
