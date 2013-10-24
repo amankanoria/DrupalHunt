@@ -5,6 +5,7 @@
  * Functions for use with Drupal's Ajax framework.
  */
 
+
 /**
  * @defgroup ajax Ajax framework
  * @{
