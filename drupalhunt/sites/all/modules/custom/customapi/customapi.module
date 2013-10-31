@@ -15,9 +15,32 @@ function store_reg_key()
 {
 
 
-    $reg_key = $_POST["REG_KEY"];
-    print_r($reg_key);
-    print_r("Hello") ;
+       $reg_key = $_GET["REG_KEY"];
+       $imei = $_GET["IMEI"] ;
+       $contact = $_GET["CONTACT"] ;
+       $name = $_GET["NAME"] ;
+    
+    
+    
+    
+    $nid = db_insert('gcm_contacts')
+    ->fields(array(
+    'imei' => $imei,
+    'name' => $name,
+    'contact' => $contact,
+    'reg_key' => $reg_key,
+    
+    ))
+->execute();
+// $nid = 0 for user query success
+
+if($nid == 0)
+    print_r("success") ;
+ else
+ 	print_r("failure") ;
+ 
+    //print_r($nid);
+    //print_r("Hello") ;
 
 
 }
