@@ -1,0 +1,23 @@
+<?php
+
+
+function customapi_menu() {
+	$items['dbregkey'] = array(
+	'title' => 'Insert Registration key',
+	'page callback' => 'store_reg_key',
+	'access callback' => TRUE,
+	'type' => MENU_CALLBACK,
+	);
+	return $items;
+}
+
+function store_reg_key()
+{
+
+
+    $reg_key = $_POST["REG_KEY"];
+    print_r($reg_key);
+    print_r("Hello") ;
+
+
+}
