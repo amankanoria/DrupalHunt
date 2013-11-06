@@ -28,7 +28,7 @@ function customapi_schema()
 			),
 			'reg_key' => array(
 				'type' => 'varchar',
-				'length' => 300,
+				'length' => 100,
 				'not null' => TRUE,
 				'description' => "Registration assigned to device by GCM server",
 			),
