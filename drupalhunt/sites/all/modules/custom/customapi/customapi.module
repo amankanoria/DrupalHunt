@@ -26,14 +26,15 @@ function get_db_data()
 
 $result = db_query("SELECT reg_key,imei FROM {gcm_contacts}");
 
-foreach ($result as $row) {
-echo $row->reg_key."<br/>";
+		foreach ($result as $row) {
+		echo $row->reg_key."<br/>";
+		}
+		
+		foreach ($result as $row) {
+		echo $row->imei."<br/>";
 
-foreach ($result as $row) {
-echo $row->imei."<br/>";
 
-
-}
+		}
 
 
 }
