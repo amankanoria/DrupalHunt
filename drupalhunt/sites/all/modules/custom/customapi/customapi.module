@@ -8,8 +8,31 @@ function customapi_menu() {
 	'access callback' => TRUE,
 	'type' => MENU_CALLBACK,
 	);
+	
+	$items['dbdata'] = array(
+		'title' => 'Get Db table data',
+		'page callback' => 'get_db_data',
+		'access callback' => TRUE,
+		'type' => MENU_CALLBACK,
+	);
+	
 	return $items;
 }
+
+
+function get_db_data()
+{
+
+$result = db_query("SELECT reg_key FROM {gcm_contacts}");
+
+foreach ($result as $row) {
+echo $row->reg_key."<br/>";
+}
+
+
+}
+
+
 
 function store_reg_key()
 {
