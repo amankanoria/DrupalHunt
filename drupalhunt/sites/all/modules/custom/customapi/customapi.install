@@ -20,6 +20,7 @@ function customapi_schema()
 				'description' => "Name of owner of device",
 			),
 			'contact' => array(
+			
 				'type' => 'varchar',
 				'length' => '12',
 				'not null' => TRUE,

@@ -7,6 +7,7 @@ function customapi_menu() {
 	'page callback' => 'store_reg_key',
 	'access callback' => TRUE,
 	'type' => MENU_CALLBACK,
+	
 	);
 	
 	$items['dbdata'] = array(
