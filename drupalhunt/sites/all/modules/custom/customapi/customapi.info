@@ -1,6 +1,0 @@
-name = "customapi"
-description = "To introduce APIs "
-package = "Custom Modules"
-core = "7.x"
-files[] = customapi.module
-files[] = customapi.install
