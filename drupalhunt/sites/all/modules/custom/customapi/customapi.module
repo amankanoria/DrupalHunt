@@ -17,6 +17,14 @@ function customapi_menu() {
 		'type' => MENU_CALLBACK,
 	);
 	
+	$items['rmregkey'] = array(
+			'title' => 'Remove registration key',
+			'page callback' => 'remove_db_data',
+			'access callback' => TRUE,
+			'type' => MENU_CALLBACK,
+	);
+	
+	
 	return $items;
 }
 
@@ -35,6 +43,8 @@ $result = db_query("SELECT reg_key,imei FROM {gcm_contacts}");
 
 
 		}
+		
+		
 
 
 }
@@ -80,5 +90,26 @@ if($nid == 0)
     //print_r($nid);
     //print_r("Hello") ;
 
+
+}
+
+function remove_db_data()
+{
+
+$imei = $_GET["IMEI"] ;
+//print_r($imei) ;
+$num_deleted = db_delete('gcm_contacts')
+->condition('imei',$imei)
+->execute();
+//print_r($num_deleted) ;
+if($num_deleted == 1)
+{
+	print_r("success") ;
+}
+else
+{
+print_r("failure") ;
+
+}
 
 }
